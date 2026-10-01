@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>COS30045 - T05 D3 Multi-chart Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- D3.js Version 7 CDN -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <h1>D3 Charts Dashboard</h1>
+      <p>Australian TV Energy Consumption & Electricity Spot Prices</p>
+    </div>
+  </header>
+
+  <main class="dashboard-grid">
+    <!-- 1. Scatter Plot -->
+    <section class="chart-card">
+      <div class="card-header">
+        <h2>Energy Consumption vs. Star Rating</h2>
+        <p class="chart-desc">Scatter plot comparing TV energy consumption (kWh/year) across energy star ratings.</p>
+      </div>
+      <div id="scatter-chart" class="chart-container"></div>
+    </section>
+
+    <!-- 2. Line Chart -->
+    <section class="chart-card">
+      <div class="card-header">
+        <h2>Electricity Spot Prices (1998 - 2024)</h2>
+        <p class="chart-desc">Line chart showing the average wholesale electricity spot price trajectory ($/MWh).</p>
+      </div>
+      <div id="line-chart" class="chart-container"></div>
+    </section>
+
+    <!-- 3. Bar Chart -->
+    <section class="chart-card">
+      <div class="card-header">
+        <h2>Mean Energy Consumption: 55" TVs Only</h2>
+        <p class="chart-desc">Bar chart comparing active power consumption across display types for 55-inch models.</p>
+      </div>
+      <div id="bar-chart" class="chart-container"></div>
+    </section>
+
+    <!-- 4. Donut Chart -->
+    <section class="chart-card">
+      <div class="card-header">
+        <h2>Energy Consumption Share Across All Sizes</h2>
+        <p class="chart-desc">Donut chart illustrating total energy distribution by screen technology.</p>
+      </div>
+      <div id="donut-chart" class="chart-container"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 COS30045 Data Visualisation. Built with D3.js v7.</p>
+  </footer>
+
+  <script src="scatter.js"></script>
+  <script src="line.js"></script>
+  <script src="bar.js"></script>
+  <script src="donut.js"></script>
+</body>
+</html>
